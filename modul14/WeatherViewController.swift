@@ -14,10 +14,10 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cityLabel.text =  Persistance2.shared.cityName
-        statusLabel.text = Persistance2.shared.status
-        weatherImage.image = UIImage(named: "\(String(describing: Persistance2.shared.image))")
-        infoLabel.text = Persistance2.shared.info
+        cityLabel.text =  Persistance2.shared.cityName ?? "Город"
+        statusLabel.text = Persistance2.shared.status ?? "... C°"
+        weatherImage.image = UIImage(named: "\(String(describing: Persistance2.shared.image))") ?? UIImage(named: "load")
+        infoLabel.text = Persistance2.shared.info ?? "Нет разрешения на геопозицию"
         startLocationManager()
 }
     func updateView(){

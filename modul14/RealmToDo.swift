@@ -3,12 +3,14 @@
 import UIKit
 import RealmSwift
 
-let realm = try! Realm()
-var todoList: Results<TodoItem> {
-    get { return realm.objects(TodoItem.self) }
-}
+
 
 class RealmToDo: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let realm = try! Realm()
+    var todoList: Results<TodoItem> {
+        get { return realm.objects(TodoItem.self) }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
@@ -44,9 +46,9 @@ class RealmToDo: UIViewController, UITableViewDelegate, UITableViewDataSource {
             todoItem.detail = textField_todo.text!
             todoItem.status = 0
 
-            try! realm.write({ 
-                realm.add(todoItem)
-                self.tableView.insertRows(at: [IndexPath.init(row: todoList.count-1, section: 0)], with: .automatic) })
+            try! self.realm.write({
+                 self.realm.add(todoItem)
+                 self.tableView.insertRows(at: [IndexPath.init(row: self.todoList.count-1, section: 0)], with: .automatic) })
          }
         
          alertController.addAction(action_add)

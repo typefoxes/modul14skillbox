@@ -37,7 +37,7 @@
                                 <rect key="frame" x="168.5" y="306" width="77" height="30"/>
                                 <state key="normal" title="Сохранить"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6a-zf-H1e"/>
+                                    <action selector="saveItButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ws-Fi-x3r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,9 +191,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="847"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrk-Tt-TUg">
-                                <rect key="frame" x="10" y="163" width="394" height="52"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrk-Tt-TUg">
+                                <rect key="frame" x="10" y="169.5" width="394" height="45.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
